@@ -21,99 +21,36 @@ This project is a simple RESTful API built using **Node.js**, **Express**, and *
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/user-address-api.git
+   git clone https://github.com/avinash-18-art/smokeTree-Assignment.git
    cd user-address-api
-2. Install dependencies:
-    npm install
+   ```
 
-3. API Endpoints
-Register User and Address
-URL: /register
-Method: POST
-Description: Registers a user with a name and address.
-Request Body
+2. Install dependencies: npm install
+
+3. API Endpoints Register User and Address URL: /register Method: POST Description: Registers a user with a name and address. Request Body
 
 4. json
 
-{
-  "name": "John Doe",
-  "address": "123 Main St"
-}
-Response
-json
-Copy code
-{
-  "message": "User and address registered successfully!",
-  "user": {
-    "id": 1,
-    "name": "John Doe"
-  },
-  "address": {
-    "id": 1,
-    "address": "123 Main St",
-    "userId": 1
-  }
-}
+{ "name": "John Doe", "address": "123 Main St" } Response json Copy code { "message": "User and address registered successfully!", "user": { "id": 1, "name": "John Doe" }, "address": { "id": 1, "address": "123 Main St", "userId": 1 } }
 
 5. Project Structure
 
-user-address-api/
-├── config/
-│   └── config.json         # Database configuration
-├── models/
-│   ├── address.js          # Address model
-│   ├── index.js            # Model initialization and associations
-│   └── user.js             # User model
-├── node_modules/            # Installed dependencies
-├── index.js                # Main server file
-├── database.sqlite3        # SQLite database file (generated automatically)
-├── package.json            # Project metadata and dependencies
-├── package-lock.json       # Dependency lock file
-└── README.md               # Project documentation 
+user-address-api/ ├── config/ │ └── config.json # Database configuration ├── models/ │ ├── address.js # Address model │ ├── index.js # Model initialization and associations │ └── user.js # User model ├── node_modules/ # Installed dependencies ├── index.js # Main server file ├── database.sqlite3 # SQLite database file (generated automatically) ├── package.json # Project metadata and dependencies ├── package-lock.json # Dependency lock file └── README.md # Project documentation
 
-6. Testing the API
-To test the API, you can use Postman or Insomnia to send HTTP requests.
+6. Testing the API To test the API, you can use Postman or Insomnia to send HTTP requests.
 
-Example Request:
-Method: POST
-URL: http://localhost:3000/register
-Body: (Raw JSON)
+Example Request: Method: POST URL: http://localhost:3000/register Body: (Raw JSON)
 
-{
-  "name": "Jane Doe",
-  "address": "456 Another St"
-}
-Example Response:
+{ "name": "Jane Doe", "address": "456 Another St" } Example Response:
 
-{
-  "message": "User and address registered successfully!",
-  "user": {
-    "id": 2,
-    "name": "Jane Doe"
-  },
-  "address": {
-    "id": 2,
-    "address": "456 Another St",
-    "userId": 2
-  }
-}
-Database Configuration
-The database configuration can be found in config/config.json. By default, it uses SQLite3, but you can switch to another relational database like MySQL or PostgreSQL by modifying the settings.
+{ "message": "User and address registered successfully!", "user": { "id": 2, "name": "Jane Doe" }, "address": { "id": 2, "address": "456 Another St", "userId": 2 } } Database Configuration The database configuration can be found in config/config.json. By default, it uses SQLite3, but you can switch to another relational database like MySQL or PostgreSQL by modifying the settings.
 
 Example config.json for MySQL:
 
-{
-  "development": {
-    "username": "root",
-    "password": "yourpassword",
-    "database": "user_address_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
- 
- ## License:
- 
+{ "development": { "username": "root", "password": "yourpassword", "database": "user_address_db", "host": "127.0.0.1", "dialect": "mysql" } }
+
+## License:
+
 ### Key Sections of the README:
 
 1. **Overview**: Provides a brief description of the project.
@@ -125,4 +62,3 @@ Example config.json for MySQL:
 7. **License**: Specifies the license for the project (assuming MIT).
 
 This README gives clear instructions on how to set up and use the project, making it easier for others to contribute or test.
-
